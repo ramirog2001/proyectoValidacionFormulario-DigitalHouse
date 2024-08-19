@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de un formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="registroForm">
+
+        <h2>Formulario de Registro</h2>
+
+        <form id="formulario" novalidate>
+            
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" minlength="3" required autocomplete="off">
+            <div class="error" id="errorNombre"></div>
+            <!-- <br> -->
+
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" minlength="3" required autocomplete="off">
+            <div class="error" id="errorApellido"></div>
+            <br>
+            
+            <label for="documento">Documento</label>
+            <input type="text" name="documento" id="documento" minlength="3" required autocomplete="off">
+            <div class="error" id="errorDocumento"></div>
+            <br>
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required autocomplete="off">
+            <div class="error" id="errorEmail"></div>
+            <br>
+
+            <label for="edad">Edad</label>
+            <input type="number" name="edad" id="edad" required>
+            <div class="error" id="errorEdad"></div>
+            <br>
+
+            <label for="actividad">Actividad</label>
+            <select name="actividad" id="actividad" required>
+                <option value="">Seleccione...</option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Programacion">Programacion</option>
+                <option value="IA">IA</option>
+                <option value="Automatizacion">Automatizacion</option>
+                <option value="Sistemas">Sistemas</option>
+                <option value="Educacion">Educacion</option>
+            </select>
+            <div class="error" id="errorActividad"></div>
+            <br>
+
+            <label for="nivelEstudio">Nivel de Estudio</label>
+            <select name="nivelEstudio" id="nivelEstudio" required>
+                <option value="">Seleccione...</option>
+                <option value="Secundario">Secundario</option>
+                <option value="Terciario">Terciario</option>
+                <option value="Universitario">Universitario</option>
+                <option value="Posgrado">Posgrado</option>
+            </select>
+            <div class="error" id="errorNivelEstudio"></div>
+            <br>
+
+            <label for="aceptoTerminos" class="inline">
+                <input type="checkbox" name="aceptoTerminos" id="aceptoTerminos" required>
+                Acepto términos y condiciones
+            </label>
+            <div class="error" id="errorAceptoTerminos"></div>
+            <br>
+
+            <label class="inline">Publicidad</label>
+            <input type="checkbox" name="ofertas" id="ofertas" value="ofertas">
+            <label for="ofertas" class="inline">Ofertas</label>
+            <input type="checkbox" name="novedades" id="novedades" value="novedades">
+            <label for="novedades" class="inline">Novedades</label>
+            <div class="error" id="errorPublicidad"></div>
+            
+            <input type="submit" value="Registrar">
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
